@@ -1,4 +1,4 @@
-package com.razah.dev.bookstore.transaction.dto.response;
+package com.razah.dev.bookstore.transaction.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PagingResponse {
+public class CustomerRequest {
 }

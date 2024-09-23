@@ -6,12 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class CommonResponse<T>{
-    private T data;
-    private Integer statusCode;
-    private String message;
-    private PagingResponse pagingResponse;
+public class TransactionResponse {
 }

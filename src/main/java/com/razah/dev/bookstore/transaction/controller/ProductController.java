@@ -7,14 +7,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = APIUrl.EMPLOYEE)
+@RequestMapping(path = APIUrl.PRODUCT)
 @RequiredArgsConstructor
-public class EmployeeController {
+public class ProductController {
 
-    @PutMapping(
+    @PostMapping(
 
     )
-    public ResponseEntity<CommonResponse<?>> update(@RequestBody UpdateEmployee updateEmployee)
+    public ResponseEntity<CommonResponse<?>> create(@RequestBody UpdateEmployee updateEmployee)
     {
 
         return ResponseEntity.status().body();
@@ -31,6 +31,14 @@ public class EmployeeController {
 
     )
     public ResponseEntity<CommonResponse<?>> getAll(@RequestBody UpdateEmployee updateEmployee)
+    {
+
+        return ResponseEntity.status().body();
+    }
+    @PutMapping(
+
+    )
+    public ResponseEntity<CommonResponse<?>> update(@RequestBody UpdateEmployee updateEmployee)
     {
 
         return ResponseEntity.status().body();

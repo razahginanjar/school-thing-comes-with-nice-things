@@ -7,10 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = APIUrl.EMPLOYEE)
+@RequestMapping(path = APIUrl.CUSTOMER)
 @RequiredArgsConstructor
-public class EmployeeController {
-
+public class CustomerController {
     @PutMapping(
 
     )
