@@ -9,5 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CustomerRequest {
+public class CreateCustomerRequest {
+    private String id;
+
+    private String name;
+
+    private String telephone;
+
+    private String email;
 }

@@ -9,5 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TransactionRequest {
+public class CreateProductPriceRequest {
+    private String id;
+
+    private Long price;
 }

@@ -1,4 +1,4 @@
 package com.razah.dev.bookstore.transaction.mapper;
 
-public interface OutletMapper {
+public interface TransactionDetailMapper {
 }

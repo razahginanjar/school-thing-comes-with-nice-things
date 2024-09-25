@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
-import com.razah.dev.bookstore.transaction.dto.request.EmployeeRequest;
+import com.razah.dev.bookstore.transaction.dto.request.CreateEmployeeRequest;
 import com.razah.dev.bookstore.transaction.entity.Employee;
 import com.razah.dev.bookstore.transaction.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -12,12 +12,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
     @Override
-    public Employee create(EmployeeRequest request) {
+    public Employee create(CreateEmployeeRequest request) {
         return null;
     }
 
     @Override
-    public Employee update(EmployeeRequest request) {
+    public Employee update(CreateEmployeeRequest request) {
         return null;
     }
 

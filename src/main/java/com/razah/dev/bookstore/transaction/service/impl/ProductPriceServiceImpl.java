@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
-import com.razah.dev.bookstore.transaction.dto.request.ProductPriceRequest;
+import com.razah.dev.bookstore.transaction.dto.request.CreateProductPriceRequest;
 import com.razah.dev.bookstore.transaction.entity.ProductPrice;
 import com.razah.dev.bookstore.transaction.service.ProductPriceService;
 import lombok.RequiredArgsConstructor;
@@ -12,12 +12,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductPriceServiceImpl implements ProductPriceService {
     @Override
-    public ProductPrice create(ProductPriceRequest request) {
+    public ProductPrice create(CreateProductPriceRequest request) {
         return null;
     }
 
     @Override
-    public ProductPrice update(ProductPriceRequest request) {
+    public ProductPrice update(CreateProductPriceRequest request) {
         return null;
     }
 

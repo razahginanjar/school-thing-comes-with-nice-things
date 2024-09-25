@@ -9,5 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OutletRequest {
+public class CreateEmployeeRequest {
+    private String id;
+
+    private String name;
+
+    private String telephone;
+
+    private String email;
+
+    private String position;
 }

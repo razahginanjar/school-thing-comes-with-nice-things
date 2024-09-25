@@ -25,4 +25,8 @@ public class Employee {
     private String email;
 
     private String position; // sementara nanti ada entity lagi buat slip gaji
+
+    @OneToOne
+    @JoinColumn(name = "users_id")
+    private Users users;
 }

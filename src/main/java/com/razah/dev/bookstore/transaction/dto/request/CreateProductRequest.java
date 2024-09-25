@@ -9,5 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TransactionDetailRequest {
+public class CreateProductRequest {
+    private String id;
+
+    private String name;
+
+    private String description;
+
+    private CreateProductPriceRequest price;
 }

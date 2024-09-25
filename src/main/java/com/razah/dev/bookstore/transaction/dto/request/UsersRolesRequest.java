@@ -10,4 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UsersRolesRequest {
+    private String id;
+
+    private String username;
+
+    private String password;
+
 }

@@ -21,4 +21,6 @@ public class TransactionDetail {
     @ManyToOne
     @JoinColumn(name = "transaction_id")
     private Transaction transaction;
+
+    
 }
