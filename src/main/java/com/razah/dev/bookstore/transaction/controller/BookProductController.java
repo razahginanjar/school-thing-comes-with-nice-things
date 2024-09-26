@@ -1,16 +1,14 @@
 package com.razah.dev.bookstore.transaction.controller;
 
-import com.razah.dev.bookstore.transaction.constant.APIUrl;
 import com.razah.dev.bookstore.transaction.dto.response.CommonResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = APIUrl.PRODUCT)
+@RequestMapping
 @RequiredArgsConstructor
-public class ProductController {
-
+public class BookProductController {
     @PostMapping(
 
     )

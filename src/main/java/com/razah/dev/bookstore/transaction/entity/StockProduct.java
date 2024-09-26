@@ -10,20 +10,21 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = ConstantTable.OUTLET)
+@Table(name = "stock_product")
 @Getter
 @Setter
-public class Outlet {
-
+public class StockProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String code;
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product productStock;
 
-    private String location;
+    @ManyToOne
+    @JoinColumn(name = "outlet_id")
+    private Outlet outletStock;
 
-    private String telephone;
-
-    private String email;
+    private Integer stock;
 }

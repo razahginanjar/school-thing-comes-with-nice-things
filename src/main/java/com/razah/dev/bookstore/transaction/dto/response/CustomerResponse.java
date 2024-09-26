@@ -10,4 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CustomerResponse {
+    private String id;
+
+    private String name;
+
+    private String telephone;
+
+    private String email;
 }

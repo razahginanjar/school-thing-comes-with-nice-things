@@ -10,4 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class EmployeeResponse {
+    private String id;
+
+    private String name;
+
+    private String telephone;
+
+    private String email;
+
+    private String position;
 }

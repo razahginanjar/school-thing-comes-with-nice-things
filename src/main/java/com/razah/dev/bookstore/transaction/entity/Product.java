@@ -21,13 +21,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String name;
-
-    private String description;
-
-    private Long stock;
+    @Column(unique = true, nullable = false)
+    private String code;
 
     @ManyToOne
     @JoinColumn(name = "product_price_id")
     ProductPrice productPrice;
+
+    @ManyToMany
+    private List<Outlet> outlets;
 }

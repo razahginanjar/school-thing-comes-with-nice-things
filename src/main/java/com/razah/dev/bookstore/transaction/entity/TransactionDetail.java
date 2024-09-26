@@ -1,6 +1,7 @@
 package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.OrderType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,9 +19,21 @@ public class TransactionDetail {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Column(name = "total_sales")
+    private Long totalSales;
+
+    @Column(name = "quantity")
+    private Integer quantity;
+
     @ManyToOne
     @JoinColumn(name = "transaction_id")
     private Transaction transaction;
 
-    
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product productTransaction;
+
+    @Column(name = "order_type")
+    private OrderType orderType;
+
 }

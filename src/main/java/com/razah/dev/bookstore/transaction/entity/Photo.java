@@ -1,6 +1,7 @@
 package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.PhotoMaterials;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,20 +11,22 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = ConstantTable.OUTLET)
+@Table(name = "m_photo")
 @Getter
 @Setter
-public class Outlet {
-
+public class Photo {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String code;
+    @Column(unique = true, nullable = false)
+    private String size;
 
-    private String location;
+    @Enumerated(EnumType.STRING)
+    private PhotoMaterials material;
 
-    private String telephone;
+    @OneToOne
+    @JoinColumn(name = "product_id")
+    private Product productPhoto;
 
-    private String email;
 }

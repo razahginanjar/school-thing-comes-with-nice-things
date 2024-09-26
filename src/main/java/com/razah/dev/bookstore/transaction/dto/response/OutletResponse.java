@@ -10,4 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class OutletResponse {
+    private String id;
+
+    private String code;
+
+    private String location;
+
+    private String telephone;
+
+    private String email;
 }
