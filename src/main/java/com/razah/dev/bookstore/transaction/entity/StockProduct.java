@@ -2,10 +2,7 @@ package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
@@ -13,6 +10,7 @@ import lombok.Setter;
 @Table(name = "stock_product")
 @Getter
 @Setter
+@Builder
 public class StockProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

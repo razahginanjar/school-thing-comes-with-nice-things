@@ -4,8 +4,8 @@ import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.lang.constant.Constable;
 
+@Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,11 +19,14 @@ public class Customer {
 
     private String name;
 
-    private String telephone;
+    private Integer points;
 
+    @Column(unique = true, nullable = false)
+    private String telephone;
+    @Column(unique = true, nullable = false)
     private String email;
 
     @OneToOne
     @JoinColumn(name = "users_id")
-    private Users users;
+    private Users usersCustomer;
 }

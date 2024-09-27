@@ -1,5 +1,6 @@
 package com.razah.dev.bookstore.transaction.dto.request;
 
+import com.razah.dev.bookstore.transaction.constant.PositionEmployee;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,7 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CreateEmployeeRequest {
-    private String id;
 
     private String name;
 
@@ -18,5 +18,5 @@ public class CreateEmployeeRequest {
 
     private String email;
 
-    private String position;
+    private PositionEmployee position;
 }

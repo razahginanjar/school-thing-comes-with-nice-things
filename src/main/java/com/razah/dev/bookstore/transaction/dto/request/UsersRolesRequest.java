@@ -1,5 +1,6 @@
 package com.razah.dev.bookstore.transaction.dto.request;
 
+import com.razah.dev.bookstore.transaction.constant.Roles;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,10 +11,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UsersRolesRequest {
-    private String id;
-
-    private String username;
-
-    private String password;
-
+    private Roles role;
 }

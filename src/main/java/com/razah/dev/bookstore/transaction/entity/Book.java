@@ -3,10 +3,7 @@ package com.razah.dev.bookstore.transaction.entity;
 import com.razah.dev.bookstore.transaction.constant.BookType;
 import com.razah.dev.bookstore.transaction.constant.PhotoMaterials;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
@@ -14,6 +11,7 @@ import lombok.Setter;
 @Table(name = "m_book")
 @Getter
 @Setter
+@Builder
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

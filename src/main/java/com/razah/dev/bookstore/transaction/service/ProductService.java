@@ -11,11 +11,11 @@ public interface ProductService {
     Product create(CreateProductRequest request);
     Product update(UpdateProductRequest request);
     Product getById(String id);
-    List<Product> getAll(String request);
+    List<Product> getAll();
     void delete(String id);
 
     ProductResponse createResponse(CreateProductRequest request);
     ProductResponse updateResponse(UpdateProductRequest request);
     ProductResponse getByIdResponse(String id);
-    List<ProductResponse> getAllResponses(String request);
+    List<ProductResponse> getAllResponses();
 }

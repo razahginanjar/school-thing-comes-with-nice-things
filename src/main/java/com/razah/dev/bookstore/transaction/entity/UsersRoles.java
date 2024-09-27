@@ -3,16 +3,14 @@ package com.razah.dev.bookstore.transaction.entity;
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import com.razah.dev.bookstore.transaction.constant.Roles;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = ConstantTable.USERS_ROLES)
 @Getter
+@Builder
 @Setter
 public class UsersRoles {
     @Id

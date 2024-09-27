@@ -3,10 +3,7 @@ package com.razah.dev.bookstore.transaction.entity;
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import com.razah.dev.bookstore.transaction.constant.OrderType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
@@ -14,6 +11,7 @@ import lombok.Setter;
 @Table(name = ConstantTable.TRANSACTION_DETAIL)
 @Getter
 @Setter
+@Builder
 public class TransactionDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

@@ -10,9 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CreateOutletRequest {
-    private String id;
-
-    private String name;
 
     private String location;
 

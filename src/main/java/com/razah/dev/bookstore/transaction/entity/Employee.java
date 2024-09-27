@@ -1,11 +1,9 @@
 package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.PositionEmployee;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
@@ -13,6 +11,7 @@ import lombok.Setter;
 @Table(name = ConstantTable.EMPLOYEE)
 @Getter
 @Setter
+@Builder
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -24,9 +23,11 @@ public class Employee {
 
     private String email;
 
-    private String position; // sementara nanti ada entity lagi buat slip gaji
+    @Enumerated(EnumType.STRING)
+    private PositionEmployee position; // sementara nanti ada entity lagi buat slip gaji
 
     @OneToOne
     @JoinColumn(name = "users_id")
-    private Users users;
+    private Users usersEmployee;
+
 }

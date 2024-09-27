@@ -2,10 +2,7 @@ package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -15,6 +12,7 @@ import java.util.List;
 @Table(name = ConstantTable.PRODUCT)
 @Getter
 @Setter
+@Builder
 public class Product {
 
     @Id
@@ -26,8 +24,6 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "product_price_id")
-    ProductPrice productPrice;
+    private ProductPrice productPrice;
 
-    @ManyToMany
-    private List<Outlet> outlets;
 }

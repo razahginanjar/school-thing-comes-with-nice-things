@@ -2,6 +2,7 @@ package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import com.razah.dev.bookstore.transaction.constant.PhotoMaterials;
+import com.razah.dev.bookstore.transaction.constant.PhotoSized;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +20,9 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Enumerated(EnumType.STRING)
     @Column(unique = true, nullable = false)
-    private String size;
+    private PhotoSized size;
 
     @Enumerated(EnumType.STRING)
     private PhotoMaterials material;

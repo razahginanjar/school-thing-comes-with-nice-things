@@ -2,10 +2,7 @@ package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +13,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = ConstantTable.USERS)
 public class Users implements UserDetails {
     @Id
@@ -36,6 +34,10 @@ public class Users implements UserDetails {
         return usersRoles.stream().map(
             usersRoles1 -> new SimpleGrantedAuthority(usersRoles1.getRoles().name())
         ).toList();
+    }
+
+    public List<UsersRoles> getUsersRoles() {
+        return usersRoles;
     }
 
     public void setPassword(String password) {
