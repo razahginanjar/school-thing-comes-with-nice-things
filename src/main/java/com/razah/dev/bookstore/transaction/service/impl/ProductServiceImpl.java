@@ -60,6 +60,17 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product getByCode(String code) {
+        if(Objects.isNull(code))
+        {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase());
+        }
+        return productRepository.findByCode(code).orElseThrow(
+                () -> new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase())
+        );
+    }
+
+    @Override
     public List<Product> getAll() {
         return productRepository.findAll();
     }

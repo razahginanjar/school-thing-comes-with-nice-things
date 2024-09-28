@@ -31,7 +31,4 @@ public class TransactionDetail {
     @JoinColumn(name = "product_id")
     private Product productTransaction;
 
-    @Column(name = "order_type")
-    private OrderType orderType;
-
 }

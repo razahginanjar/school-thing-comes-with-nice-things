@@ -11,6 +11,7 @@ public interface OutletService {
     Outlet create(CreateOutletRequest request);
     Outlet update(UpdateOutletRequest request);
     Outlet getById(String id);
+    Outlet getByCode(String code);
     List<Outlet> getAll();
     void delete(String id);
 

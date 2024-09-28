@@ -27,6 +27,12 @@ public class StockServiceImpl implements StockService {
     @Override
     public StockProduct create(CreateStockRequest request, Outlet outlet, Product product) {
         validationUtil.validate(request);
+        if(stockProductRepository.existByOutletStockAndProductStock(outlet, product))
+        {
+            return stockProductRepository.findByOutletStockAndProductStock(outlet, product).orElseThrow(
+                    () -> new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase())
+            );
+        }
         StockProduct stockProduct = new StockProduct();
         stockProduct.setStock(request.getStock());
         stockProduct.setOutletStock(outlet);
@@ -48,6 +54,13 @@ public class StockServiceImpl implements StockService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase());
         }
         return stockProductRepository.findById(id).orElseThrow(
+                () -> new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase())
+        );
+    }
+
+    @Override
+    public StockProduct getByOutletAndProduct(Outlet outlet, Product product) {
+        return stockProductRepository.findByOutletStockAndProductStock(outlet, product).orElseThrow(
                 () -> new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase())
         );
     }

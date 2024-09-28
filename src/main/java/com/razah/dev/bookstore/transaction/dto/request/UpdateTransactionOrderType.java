@@ -6,15 +6,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UpdateTransactionRequest {
+public class UpdateTransactionOrderType {
     private String id;
-    private String codeOutlet;
     private OrderType orderType;
-    private List<UpdateTransactionDetailRequest> detailRequests;
 }

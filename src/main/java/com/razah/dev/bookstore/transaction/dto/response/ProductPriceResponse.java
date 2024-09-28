@@ -1,21 +1,16 @@
 package com.razah.dev.bookstore.transaction.dto.response;
 
-import com.razah.dev.bookstore.transaction.constant.BookType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class BookResponse {
+public class ProductPriceResponse {
     private String id;
 
-    private String name;
-
-    private BookType type;
-
-    private ProductResponse product;
+    private Long price;
 }

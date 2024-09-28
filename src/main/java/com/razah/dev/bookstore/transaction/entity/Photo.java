@@ -21,7 +21,7 @@ public class Photo {
     private String id;
 
     @Enumerated(EnumType.STRING)
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private PhotoSized size;
 
     @Enumerated(EnumType.STRING)

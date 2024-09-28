@@ -1,5 +1,9 @@
 package com.razah.dev.bookstore.transaction.dto.response;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +18,8 @@ public class CustomerResponse {
 
     private String name;
 
-    private String telephone;
+    private Integer points;
 
+    private String telephone;
     private String email;
 }

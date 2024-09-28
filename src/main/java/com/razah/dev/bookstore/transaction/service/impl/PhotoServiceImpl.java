@@ -34,7 +34,7 @@ public class PhotoServiceImpl implements PhotoService {
         validationUtil.validate(request);
 
         Outlet byId = outletService.getById(request.getIdOutlet());
-        String photoSequence = sequenceGenerator.getPhotoSequence(byId.getCode());
+        String photoSequence = sequenceGenerator.getPhotoSequence();
 
         CreateProductRequest build = CreateProductRequest
                 .builder()

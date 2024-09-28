@@ -3,10 +3,7 @@ package com.razah.dev.bookstore.transaction.service.impl;
 import com.razah.dev.bookstore.transaction.dto.request.*;
 import com.razah.dev.bookstore.transaction.dto.response.BookResponse;
 import com.razah.dev.bookstore.transaction.dto.response.PhotoResponse;
-import com.razah.dev.bookstore.transaction.entity.Book;
-import com.razah.dev.bookstore.transaction.entity.Outlet;
-import com.razah.dev.bookstore.transaction.entity.Photo;
-import com.razah.dev.bookstore.transaction.entity.Product;
+import com.razah.dev.bookstore.transaction.entity.*;
 import com.razah.dev.bookstore.transaction.mapper.BookMapper;
 import com.razah.dev.bookstore.transaction.repository.BookRepository;
 import com.razah.dev.bookstore.transaction.service.BookService;
@@ -38,7 +35,7 @@ public class BookServiceImpl implements BookService {
         validationUtil.validate(request);
 
         Outlet byId = outletService.getById(request.getIdOutlet());
-        String photoSequence = sequenceGenerator.getBookSequence(byId.getCode());
+        String photoSequence = sequenceGenerator.getBookSequence();
 
         CreateProductRequest build = CreateProductRequest
                 .builder()

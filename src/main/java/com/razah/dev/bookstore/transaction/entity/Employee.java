@@ -19,8 +19,10 @@ public class Employee {
 
     private String name;
 
+    @Column(unique = true, nullable = false)
     private String telephone;
 
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Enumerated(EnumType.STRING)

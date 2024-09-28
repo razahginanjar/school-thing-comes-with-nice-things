@@ -24,18 +24,20 @@ public class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
             sequence.setSequence(oldId + 1);
             sequenceGeneratorRepository.save(sequence);
             sequenceGeneratorRepository.flush();
-            return String.format("%04d", sequence.getSequence());
+            String format = String.format("%04d", sequence.getSequence());
+            return "O-" + format;
         }
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
         sequenceGenerator.setName("outlet_sequence");
         sequenceGenerator.setSequence(100);
         sequenceGeneratorRepository.saveAndFlush(sequenceGenerator);
-        return String.format("%04d", sequenceGenerator.getSequence());
+        String format = String.format("%04d", sequenceGenerator.getSequence());
+        return "O-"+format;
     }
 
     @Override
-    public String getPhotoSequence(String outletCode) {
-        if (sequenceGeneratorRepository.existsById("photo_sequence" + outletCode))
+    public String getPhotoSequence() {
+        if (sequenceGeneratorRepository.existsById("photo_sequence"))
         {
             SequenceGenerator sequence = sequenceGeneratorRepository.findByName("photo_sequence").orElseThrow(
                     () ->  new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase()));
@@ -45,19 +47,19 @@ public class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
             sequenceGeneratorRepository.save(sequence);
             sequenceGeneratorRepository.flush();
             String format = String.format("%04d", sequence.getSequence());
-            return outletCode +"-"+ "P"+"-"+format;
+            return "P"+"-"+format;
         }
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
         sequenceGenerator.setName("photo_sequence");
         sequenceGenerator.setSequence(1);
         sequenceGeneratorRepository.saveAndFlush(sequenceGenerator);
         String format = String.format("%04d", sequenceGenerator.getSequence());
-        return outletCode +"-"+ "P"+"-"+format;
+        return "P"+"-"+format;
     }
 
     @Override
-    public String getBookSequence(String outletCode) {
-        if (sequenceGeneratorRepository.existsById("book_sequence" + outletCode))
+    public String getBookSequence() {
+        if (sequenceGeneratorRepository.existsById("book_sequence"))
         {
             SequenceGenerator sequence = sequenceGeneratorRepository.findByName("book_sequence").orElseThrow(
                     () ->  new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase()));
@@ -67,13 +69,13 @@ public class SequenceGeneratorServiceImpl implements SequenceGeneratorService {
             sequenceGeneratorRepository.save(sequence);
             sequenceGeneratorRepository.flush();
             String format = String.format("%04d", sequence.getSequence());
-            return outletCode +"-"+ "B"+"-"+format;
+            return "B"+"-"+format;
         }
         SequenceGenerator sequenceGenerator = new SequenceGenerator();
         sequenceGenerator.setName("book_sequence");
         sequenceGenerator.setSequence(1);
         sequenceGeneratorRepository.saveAndFlush(sequenceGenerator);
         String format = String.format("%04d", sequenceGenerator.getSequence());
-        return outletCode +"-"+ "B"+"-"+format;
+        return "B"+"-"+format;
     }
 }

@@ -11,6 +11,6 @@ import java.util.List;
 public class RegisterResponse {
     private String username;
     private List<String> roles;
-    private EmployeeResponse merchant;
+    private EmployeeResponse employee;
     private CustomerResponse customer;
 }

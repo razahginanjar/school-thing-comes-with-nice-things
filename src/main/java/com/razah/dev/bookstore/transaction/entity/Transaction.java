@@ -1,6 +1,7 @@
 package com.razah.dev.bookstore.transaction.entity;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.OrderType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,4 +34,9 @@ public class Transaction {
 
     @OneToMany(mappedBy = "transaction")
     private List<TransactionDetail> transactionDetails;
+
+    @Column(name = "order_type")
+    private OrderType orderType;
+
+
 }

@@ -58,6 +58,17 @@ public class OutletServiceImpl implements OutletService {
     }
 
     @Override
+    public Outlet getByCode(String code) {
+        if(Objects.isNull(code))
+        {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, HttpStatus.BAD_REQUEST.getReasonPhrase());
+        }
+        return outletRepository.findByCode(code).orElseThrow(
+                () -> new ResponseStatusException(HttpStatus.NOT_FOUND, HttpStatus.NOT_FOUND.getReasonPhrase())
+        );
+    }
+
+    @Override
     public List<Outlet> getAll() {
         return outletRepository.findAll();
     }

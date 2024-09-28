@@ -26,4 +26,5 @@ public class Product {
     @JoinColumn(name = "product_price_id")
     private ProductPrice productPrice;
 
+
 }

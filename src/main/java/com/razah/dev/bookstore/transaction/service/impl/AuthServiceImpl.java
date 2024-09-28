@@ -2,10 +2,9 @@ package com.razah.dev.bookstore.transaction.service.impl;
 
 
 import com.razah.dev.bookstore.transaction.constant.Roles;
-import com.razah.dev.bookstore.transaction.dto.request.CreateEmployeeRequest;
-import com.razah.dev.bookstore.transaction.dto.request.LoginRequest;
-import com.razah.dev.bookstore.transaction.dto.request.RegisterEmployeeRequest;
-import com.razah.dev.bookstore.transaction.dto.request.UsersRolesRequest;
+import com.razah.dev.bookstore.transaction.dto.request.*;
+import com.razah.dev.bookstore.transaction.dto.response.CustomerResponse;
+import com.razah.dev.bookstore.transaction.dto.response.EmployeeResponse;
 import com.razah.dev.bookstore.transaction.dto.response.LoginResponse;
 import com.razah.dev.bookstore.transaction.dto.response.RegisterResponse;
 import com.razah.dev.bookstore.transaction.entity.Employee;
@@ -105,19 +104,19 @@ public class AuthServiceImpl implements AuthService {
                 .telephone(request.getPhoneNumber())
                 .email(request.getEmail())
                 .build();
-        Employee employee = employeeService.create(build, user);
+        EmployeeResponse employee = employeeService.createResponse(build, user);
 
         return RegisterResponse.builder()
                 .username(user.getUsername())
                 .roles(user.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList())
-                .merchant(merchant1)
+                .employee(employee)
                 .build();
     }
 
     @Override
-    public RegisterResponse registerCustomer(RegisterEmployeeRequest request) {
+    public RegisterResponse registerCustomer(RegisterCustomer request) {
         validation.validate(request);
-        UsersRoles customer = roleService.getOrSave(ConstantRole.ROLE_CUSTOMER);
+        UsersRoles customer = roleService.create(UsersRolesRequest.builder().role(Roles.ROLE_CUSTOMER).build());
         String hashPassword = passwordEncoder.encode(request.getPassword());
         Users user = Users.builder()
                 .username(request.getUsername())
@@ -128,6 +127,7 @@ public class AuthServiceImpl implements AuthService {
 
         CreateCustomerRequest createCustomerRequest = CreateCustomerRequest.builder()
                 .name(request.getName())
+                .telephone(request.getPhoneNumber())
                 .email(request.getEmail())
                 .build();
         CustomerResponse customerResponse = customerServiceImpl.createCustomerResponse(createCustomerRequest, user);

@@ -11,4 +11,5 @@ public class ConstantTable {
     public final static String USERS = "m_users";
     public final static String USERS_ROLES = "m_users_roles";
     public final static String SEQUENCE_GENERATOR = "m_sequence_generator";
+    public final static String PAYMENTS = "m_payments";
 }

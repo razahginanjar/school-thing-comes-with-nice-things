@@ -13,4 +13,5 @@ public interface StockService {
     StockProduct create(CreateStockRequest request, Outlet outlet, Product product);
     StockProduct updateStock(UpdateStockRequest request);
     StockProduct getById(String id);
+    StockProduct getByOutletAndProduct(Outlet outlet, Product product);
 }
