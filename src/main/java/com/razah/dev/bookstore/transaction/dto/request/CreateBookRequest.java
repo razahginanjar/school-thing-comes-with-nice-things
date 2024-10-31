@@ -1,9 +1,5 @@
 package com.razah.dev.bookstore.transaction.dto.request;
 
-import com.razah.dev.bookstore.transaction.constant.BookType;
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

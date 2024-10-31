@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.repository;
 
-import com.razah.dev.bookstore.transaction.entity.Photo;
+import com.razah.dev.bookstore.transaction.entities.Photo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

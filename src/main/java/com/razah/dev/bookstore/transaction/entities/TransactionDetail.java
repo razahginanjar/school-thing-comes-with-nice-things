@@ -1,7 +1,6 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
-import com.razah.dev.bookstore.transaction.constant.OrderType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +28,6 @@ public class TransactionDetail {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private Product productTransaction;
+    private Photo photoTransaction;
 
 }

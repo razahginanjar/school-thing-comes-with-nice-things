@@ -1,7 +1,7 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
-import com.razah.dev.bookstore.transaction.constant.OrderType;
+import com.razah.dev.bookstore.transaction.constant.PaymentType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,6 +28,9 @@ public class Transaction {
     @Column(name = "transaction_date")
     private LocalDate transactionDate;
 
+    @Column(name = "reserve_date")
+    private LocalDate reserveDate;
+
     @ManyToOne
     @JoinColumn(name = "outlet_id")
     private Outlet outletTransaction;
@@ -36,7 +39,7 @@ public class Transaction {
     private List<TransactionDetail> transactionDetails;
 
     @Column(name = "order_type")
-    private OrderType orderType;
+    private PaymentType paymentType;
 
 
 }

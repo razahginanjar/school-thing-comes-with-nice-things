@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.dto.request;
 
-import com.razah.dev.bookstore.transaction.constant.OrderType;
+import com.razah.dev.bookstore.transaction.constant.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +15,6 @@ import java.util.List;
 public class UpdateTransactionRequest {
     private String id;
     private String codeOutlet;
-    private OrderType orderType;
+    private PaymentType paymentType;
     private List<UpdateTransactionDetailRequest> detailRequests;
 }

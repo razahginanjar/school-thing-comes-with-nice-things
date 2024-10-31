@@ -2,9 +2,8 @@ package com.razah.dev.bookstore.transaction.service;
 
 import com.razah.dev.bookstore.transaction.dto.request.*;
 import com.razah.dev.bookstore.transaction.dto.response.TransactionDetailResponse;
-import com.razah.dev.bookstore.transaction.dto.response.TransactionResponse;
-import com.razah.dev.bookstore.transaction.entity.Transaction;
-import com.razah.dev.bookstore.transaction.entity.TransactionDetail;
+import com.razah.dev.bookstore.transaction.entities.Transaction;
+import com.razah.dev.bookstore.transaction.entities.TransactionDetail;
 
 import java.util.List;
 

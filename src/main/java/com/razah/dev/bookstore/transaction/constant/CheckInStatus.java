@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.constant;
 
-public enum OrderType {
-    ONLINE,
-    OFFLINE
+public enum CheckInStatus {
+    CHECK_IN,
+    PENDING,
 }

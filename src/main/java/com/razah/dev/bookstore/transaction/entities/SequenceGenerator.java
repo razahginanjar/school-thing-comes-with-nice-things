@@ -1,4 +1,4 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
@@ -21,5 +21,5 @@ public class SequenceGenerator {
     Integer sequence;
 
     @Column(unique = true, nullable = false)
-    String name;
+    String sequenceName;
 }

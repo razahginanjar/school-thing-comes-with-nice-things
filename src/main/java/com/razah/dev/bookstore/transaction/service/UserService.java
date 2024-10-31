@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.service;
 
-import com.razah.dev.bookstore.transaction.entity.Users;
+import com.razah.dev.bookstore.transaction.entities.Users;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {

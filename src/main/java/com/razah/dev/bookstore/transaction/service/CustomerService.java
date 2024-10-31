@@ -4,8 +4,8 @@ import com.razah.dev.bookstore.transaction.dto.request.CreateCustomerRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdateCustomerRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdatePointsCustomerRequest;
 import com.razah.dev.bookstore.transaction.dto.response.CustomerResponse;
-import com.razah.dev.bookstore.transaction.entity.Customer;
-import com.razah.dev.bookstore.transaction.entity.Users;
+import com.razah.dev.bookstore.transaction.entities.Customer;
+import com.razah.dev.bookstore.transaction.entities.Users;
 
 import java.util.List;
 

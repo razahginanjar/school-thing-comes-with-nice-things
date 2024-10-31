@@ -2,9 +2,9 @@ package com.razah.dev.bookstore.transaction.service.impl;
 
 import com.razah.dev.bookstore.transaction.dto.request.*;
 import com.razah.dev.bookstore.transaction.dto.response.PhotoResponse;
-import com.razah.dev.bookstore.transaction.entity.Outlet;
-import com.razah.dev.bookstore.transaction.entity.Photo;
-import com.razah.dev.bookstore.transaction.entity.Product;
+import com.razah.dev.bookstore.transaction.entities.Outlet;
+import com.razah.dev.bookstore.transaction.entities.Photo;
+import com.razah.dev.bookstore.transaction.entities.Product;
 import com.razah.dev.bookstore.transaction.mapper.PhotoMapper;
 import com.razah.dev.bookstore.transaction.repository.PhotoRepository;
 import com.razah.dev.bookstore.transaction.service.*;

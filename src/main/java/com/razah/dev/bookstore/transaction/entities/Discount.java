@@ -1,4 +1,4 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.PercentageDiscount;
 import jakarta.persistence.*;
@@ -23,4 +23,7 @@ public class Discount {
 
     @Column(name = "required_points")
     private Integer requiredPoints;
+
+    @Column(name = "expired_in_days")
+    private Integer expiredInDays;
 }

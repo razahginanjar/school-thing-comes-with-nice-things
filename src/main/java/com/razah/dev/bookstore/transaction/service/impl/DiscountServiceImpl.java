@@ -1,14 +1,13 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
 import com.razah.dev.bookstore.transaction.dto.request.CreateDiscountRequest;
-import com.razah.dev.bookstore.transaction.entity.Discount;
+import com.razah.dev.bookstore.transaction.entities.Discount;
 import com.razah.dev.bookstore.transaction.repository.DiscountRepository;
 import com.razah.dev.bookstore.transaction.service.DiscountService;
 import com.razah.dev.bookstore.transaction.utils.ValidationUtil;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 @Service
 @RequiredArgsConstructor

@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.repository;
 
-import com.razah.dev.bookstore.transaction.entity.Outlet;
+import com.razah.dev.bookstore.transaction.entities.Outlet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

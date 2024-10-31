@@ -1,4 +1,4 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Builder
 @Setter
-public class ProductPrice {
+public class PhotoPrice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

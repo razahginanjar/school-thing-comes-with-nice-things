@@ -3,7 +3,7 @@ package com.razah.dev.bookstore.transaction.service.impl;
 import com.razah.dev.bookstore.transaction.dto.request.CreateOutletRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdateOutletRequest;
 import com.razah.dev.bookstore.transaction.dto.response.OutletResponse;
-import com.razah.dev.bookstore.transaction.entity.Outlet;
+import com.razah.dev.bookstore.transaction.entities.Outlet;
 import com.razah.dev.bookstore.transaction.mapper.OutletMapper;
 import com.razah.dev.bookstore.transaction.repository.OutletRepository;
 import com.razah.dev.bookstore.transaction.service.OutletService;

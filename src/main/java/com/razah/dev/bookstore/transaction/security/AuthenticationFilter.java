@@ -2,7 +2,7 @@ package com.razah.dev.bookstore.transaction.security;
 
 
 import com.razah.dev.bookstore.transaction.dto.response.JWTClaims;
-import com.razah.dev.bookstore.transaction.entity.Users;
+import com.razah.dev.bookstore.transaction.entities.Users;
 import com.razah.dev.bookstore.transaction.service.impl.JwtServiceImpl;
 import com.razah.dev.bookstore.transaction.service.impl.UserServiceImpl;
 import jakarta.servlet.FilterChain;

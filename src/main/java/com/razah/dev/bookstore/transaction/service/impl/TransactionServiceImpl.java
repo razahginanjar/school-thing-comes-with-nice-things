@@ -2,9 +2,8 @@ package com.razah.dev.bookstore.transaction.service.impl;
 
 import com.razah.dev.bookstore.transaction.dto.request.*;
 import com.razah.dev.bookstore.transaction.dto.response.TransactionResponse;
-import com.razah.dev.bookstore.transaction.entity.Transaction;
-import com.razah.dev.bookstore.transaction.entity.TransactionDetail;
-import com.razah.dev.bookstore.transaction.mapper.TransactionDetailMapper;
+import com.razah.dev.bookstore.transaction.entities.Transaction;
+import com.razah.dev.bookstore.transaction.entities.TransactionDetail;
 import com.razah.dev.bookstore.transaction.mapper.TransactionMapper;
 import com.razah.dev.bookstore.transaction.repository.TransactionRepository;
 import com.razah.dev.bookstore.transaction.service.OutletService;
@@ -56,7 +55,7 @@ public class TransactionServiceImpl implements TransactionService {
                 updateTransactionDetailRequest -> transactionDetailService.update(updateTransactionDetailRequest, byId)
         ).toList());
         byId.setOutletTransaction(outletService.getByCode(request.getCodeOutlet()));
-        byId.setOrderType(request.getOrderType());
+        byId.setPaymentType(request.getPaymentType());
         return transactionRepository.saveAndFlush(byId);
     }
 
@@ -64,7 +63,7 @@ public class TransactionServiceImpl implements TransactionService {
     public Transaction updateOrderType(UpdateTransactionOrderType orderType) {
         validationUtil.validate(orderType);
         Transaction byId = getById(orderType.getId());
-        byId.setOrderType(orderType.getOrderType());
+        byId.setPaymentType(orderType.getPaymentType());
 
         List<UpdateTransactionDetailRequest> list = byId.getTransactionDetails().stream().map(
                 transactionDetail -> {
@@ -77,7 +76,7 @@ public class TransactionServiceImpl implements TransactionService {
         ).toList();
 
         UpdateTransactionRequest build = UpdateTransactionRequest.builder()
-                .orderType(byId.getOrderType())
+                .paymentType(byId.getPaymentType())
                 .id(byId.getId())
                 .detailRequests(list)
                 .codeOutlet(byId.getOutletTransaction().getCode())
@@ -98,7 +97,7 @@ public class TransactionServiceImpl implements TransactionService {
                 .detailRequests(products.getRequests())
                 .id(byId.getId())
                 .codeOutlet(byId.getOutletTransaction().getCode())
-                .orderType(byId.getOrderType())
+                .paymentType(byId.getPaymentType())
                 .build();
         return update(build);
     }

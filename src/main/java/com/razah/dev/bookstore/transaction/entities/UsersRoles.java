@@ -1,27 +1,21 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.Roles;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = ConstantTable.OUTLET)
+@Table(name = ConstantTable.USERS_ROLES)
 @Getter
-@Setter
 @Builder
-public class Outlet {
-
+@Setter
+public class UsersRoles {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String code;
-
-    private String location;
-
-    private String telephone;
-
-    private String email;
+    private Roles roles;
 }

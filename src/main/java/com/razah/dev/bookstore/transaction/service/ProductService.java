@@ -3,7 +3,7 @@ package com.razah.dev.bookstore.transaction.service;
 import com.razah.dev.bookstore.transaction.dto.request.CreateProductRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdateProductRequest;
 import com.razah.dev.bookstore.transaction.dto.response.ProductResponse;
-import com.razah.dev.bookstore.transaction.entity.Product;
+import com.razah.dev.bookstore.transaction.entities.Product;
 
 import java.util.List;
 

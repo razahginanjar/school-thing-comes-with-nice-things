@@ -1,9 +1,8 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
-import com.razah.dev.bookstore.transaction.entity.Users;
+import com.razah.dev.bookstore.transaction.entities.Users;
 import com.razah.dev.bookstore.transaction.repository.UserRepository;
 import com.razah.dev.bookstore.transaction.service.UserService;
-import com.razah.dev.bookstore.transaction.utils.ValidationUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;

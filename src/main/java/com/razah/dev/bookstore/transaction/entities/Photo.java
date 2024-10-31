@@ -1,8 +1,8 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
-import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import com.razah.dev.bookstore.transaction.constant.PhotoMaterials;
 import com.razah.dev.bookstore.transaction.constant.PhotoSized;
+import com.razah.dev.bookstore.transaction.constant.PhotoType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,15 +20,13 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private PhotoSized size;
+    private PhotoType photoType;
 
     @Enumerated(EnumType.STRING)
     private PhotoMaterials material;
 
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private Product productPhoto;
+    @ManyToOne
+    @JoinColumn(name = "price_id")
+    private PhotoPrice price;
 
 }

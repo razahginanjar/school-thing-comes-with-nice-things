@@ -1,9 +1,5 @@
 package com.razah.dev.bookstore.transaction.dto.response;
 
-import com.razah.dev.bookstore.transaction.entity.Customer;
-import com.razah.dev.bookstore.transaction.entity.Outlet;
-import com.razah.dev.bookstore.transaction.entity.TransactionDetail;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

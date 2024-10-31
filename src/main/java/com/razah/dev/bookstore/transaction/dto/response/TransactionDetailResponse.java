@@ -1,9 +1,6 @@
 package com.razah.dev.bookstore.transaction.dto.response;
 
-import com.razah.dev.bookstore.transaction.constant.OrderType;
-import com.razah.dev.bookstore.transaction.entity.Product;
-import com.razah.dev.bookstore.transaction.entity.Transaction;
-import jakarta.persistence.*;
+import com.razah.dev.bookstore.transaction.constant.PaymentType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +20,5 @@ public class TransactionDetailResponse {
 
     private ProductResponse productTransaction;
 
-    private OrderType orderType;
+    private PaymentType paymentType;
 }

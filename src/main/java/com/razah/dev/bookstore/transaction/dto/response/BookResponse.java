@@ -1,6 +1,5 @@
 package com.razah.dev.bookstore.transaction.dto.response;
 
-import com.razah.dev.bookstore.transaction.constant.BookType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

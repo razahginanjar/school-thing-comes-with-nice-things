@@ -1,30 +1,27 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = ConstantTable.PRODUCT)
+@Table(name = ConstantTable.OUTLET)
 @Getter
 @Setter
 @Builder
-public class Product {
+public class Outlet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    @Column(unique = true, nullable = false)
     private String code;
 
-    @ManyToOne
-    @JoinColumn(name = "product_price_id")
-    private ProductPrice productPrice;
+    private String location;
 
+    private String telephone;
 
+    private String email;
 }

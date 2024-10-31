@@ -1,7 +1,7 @@
 package com.razah.dev.bookstore.transaction.mapper.impl;
 
 import com.razah.dev.bookstore.transaction.dto.response.ProductPriceResponse;
-import com.razah.dev.bookstore.transaction.entity.ProductPrice;
+import com.razah.dev.bookstore.transaction.entities.PhotoPrice;
 import com.razah.dev.bookstore.transaction.mapper.ProductPriceMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ProductPriceMapperImpl implements ProductPriceMapper {
     @Override
-    public ProductPriceResponse map(ProductPrice productPrice) {
+    public ProductPriceResponse map(PhotoPrice photoPrice) {
         return null;
     }
 }

@@ -1,6 +1,6 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
-import com.razah.dev.bookstore.transaction.entity.SequenceGenerator;
+import com.razah.dev.bookstore.transaction.entities.SequenceGenerator;
 import com.razah.dev.bookstore.transaction.repository.SequenceGeneratorRepository;
 import com.razah.dev.bookstore.transaction.service.SequenceGeneratorService;
 import lombok.RequiredArgsConstructor;

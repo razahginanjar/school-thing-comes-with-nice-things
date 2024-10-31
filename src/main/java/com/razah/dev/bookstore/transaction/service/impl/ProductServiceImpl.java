@@ -4,8 +4,8 @@ import com.razah.dev.bookstore.transaction.dto.request.CreateProductPriceRequest
 import com.razah.dev.bookstore.transaction.dto.request.CreateProductRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdateProductRequest;
 import com.razah.dev.bookstore.transaction.dto.response.ProductResponse;
-import com.razah.dev.bookstore.transaction.entity.Product;
-import com.razah.dev.bookstore.transaction.entity.ProductPrice;
+import com.razah.dev.bookstore.transaction.entities.Product;
+import com.razah.dev.bookstore.transaction.entities.PhotoPrice;
 import com.razah.dev.bookstore.transaction.mapper.ProductMapper;
 import com.razah.dev.bookstore.transaction.repository.ProductRepository;
 import com.razah.dev.bookstore.transaction.service.ProductPriceService;
@@ -31,10 +31,10 @@ public class ProductServiceImpl implements ProductService {
     public Product create(CreateProductRequest request) {
         validationUtil.validate(request);
         Product product = new Product();
-        ProductPrice productPrice =
+        PhotoPrice photoPrice =
                 productPriceService.create(CreateProductPriceRequest.builder().price(request.getPrice()).build());
         product.setCode(request.getCode());
-        product.setProductPrice(productPrice);
+        product.setProductPrice(photoPrice);
         return productRepository.saveAndFlush(product);
     }
 
@@ -42,9 +42,9 @@ public class ProductServiceImpl implements ProductService {
     public Product update(UpdateProductRequest request) {
         validationUtil.validate(request);
         Product byId = getById(request.getId());
-        ProductPrice productPrice =
+        PhotoPrice photoPrice =
                 productPriceService.create(CreateProductPriceRequest.builder().price(request.getPrice()).build());
-        byId.setProductPrice(productPrice);
+        byId.setProductPrice(photoPrice);
         return productRepository.saveAndFlush(byId);
     }
 

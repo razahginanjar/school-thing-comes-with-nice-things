@@ -1,8 +1,7 @@
 package com.razah.dev.bookstore.transaction.repository;
 
-import com.razah.dev.bookstore.transaction.entity.Outlet;
-import com.razah.dev.bookstore.transaction.entity.Product;
-import com.razah.dev.bookstore.transaction.entity.StockProduct;
+import com.razah.dev.bookstore.transaction.entities.Outlet;
+import com.razah.dev.bookstore.transaction.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

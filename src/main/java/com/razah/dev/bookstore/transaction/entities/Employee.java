@@ -1,32 +1,32 @@
-package com.razah.dev.bookstore.transaction.entity;
+package com.razah.dev.bookstore.transaction.entities;
 
 import com.razah.dev.bookstore.transaction.constant.ConstantTable;
+import com.razah.dev.bookstore.transaction.constant.PositionEmployee;
 import jakarta.persistence.*;
 import lombok.*;
 
-
-@Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = ConstantTable.CUSTOMER)
+@Table(name = ConstantTable.EMPLOYEE)
 @Getter
 @Setter
-public class Customer {
+@Builder
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String name;
 
-    private Integer points;
-
     @Column(unique = true, nullable = false)
     private String telephone;
+
     @Column(unique = true, nullable = false)
     private String email;
 
     @OneToOne
     @JoinColumn(name = "users_id")
-    private Users usersCustomer;
+    private Users usersEmployee;
+
 }

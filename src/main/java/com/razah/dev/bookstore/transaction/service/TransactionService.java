@@ -4,7 +4,7 @@ package com.razah.dev.bookstore.transaction.service;
 
 import com.razah.dev.bookstore.transaction.dto.request.*;
 import com.razah.dev.bookstore.transaction.dto.response.TransactionResponse;
-import com.razah.dev.bookstore.transaction.entity.Transaction;
+import com.razah.dev.bookstore.transaction.entities.Transaction;
 
 import java.util.List;
 

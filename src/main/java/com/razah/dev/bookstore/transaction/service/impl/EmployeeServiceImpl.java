@@ -1,11 +1,10 @@
 package com.razah.dev.bookstore.transaction.service.impl;
 
 import com.razah.dev.bookstore.transaction.dto.request.CreateEmployeeRequest;
-import com.razah.dev.bookstore.transaction.dto.request.UpdateCustomerRequest;
 import com.razah.dev.bookstore.transaction.dto.request.UpdateEmployeeRequest;
 import com.razah.dev.bookstore.transaction.dto.response.EmployeeResponse;
-import com.razah.dev.bookstore.transaction.entity.Employee;
-import com.razah.dev.bookstore.transaction.entity.Users;
+import com.razah.dev.bookstore.transaction.entities.Employee;
+import com.razah.dev.bookstore.transaction.entities.Users;
 import com.razah.dev.bookstore.transaction.mapper.impl.EmployeeMapperImpl;
 import com.razah.dev.bookstore.transaction.repository.EmployeeRepository;
 import com.razah.dev.bookstore.transaction.service.EmployeeService;
